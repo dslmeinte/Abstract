@@ -244,8 +244,10 @@ var LDLData = {
     ],
 	modelJSON: [
     	{
-    		_class: "Abstract Syntax",
-    		name: "Example Language"
+    		metaType: "Abstract Syntax",
+    		settings: {
+    			name: "Example Language"
+    		}
     		/*
     		 * , _annotationValues: {
     		 * 		view: { foldOpen: false }
@@ -258,7 +260,7 @@ var LDLData = {
 			'Abstract Syntax': function(mObject) {
 					var group = new Abstract.Widgets.Layout.HorizontalGroup({ collapsible: true });
 					group.append(new Abstract.Widgets.Layout.PlainTextWidget({ text: 'Abstract Syntax' }));
-					group.append(new Abstract.Widgets.Impl.EditableTextWidget({ 'mObject': mObject, 'feature': mObject._class.features['name'] }), false);
+					group.append(new Abstract.Widgets.Impl.EditableTextWidget({ 'mObject': mObject, 'feature': mObject.metaType.features['name'] }), false);
 					return group;
 				}
 		},
