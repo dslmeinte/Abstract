@@ -1,0 +1,22 @@
+div#editor {
+	width: 800px;
+	height: 300px;
+	border: 1px solid green;
+	padding: 2px;
+}
+div#console {
+	font-size: 10px;
+	width: 600px;
+	height: 20em;
+	overflow: scroll;
+}
+div#console .error {
+	color: red;
+	font-weight: bold;
+}
+div#console .debug {
+	color: navy;
+}
+div#console div:nth-child(even) {
+	background: #ccc;
+}

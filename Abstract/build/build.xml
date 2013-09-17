@@ -1,0 +1,22 @@
+<!--
+	Builds the abstract.js file from constituent parts.
+
+	Requires ANT 1.6.3 or higher for the concat fixlastline.
+
+	(c) 2012 Meinte Boersma (DslConsultancy.com)
+-->
+<project name="Abstract-distbuild" default="build" basedir=".">
+
+	<condition property="antversionok">
+		<antversion atleast="1.6.3"/>
+	</condition>
+
+	<target name="build">
+		<fail unless="antversionok" message="ANT version is too old."/>
+		<concat destfile="../dist/abstract.js" fixlastline="true">
+			<fileset dir="../src/" includes="preamble.js,dom-util.js,editor.js,eventHandler.js,widgets-base.js,widgets-layout.js,widgets-editing.js" />	<!-- (concatenate in order) -->
+		</concat>
+		<!-- TODO  minification, versioning and continuous deploying (in that order) -->
+	</target>
+
+</project>
