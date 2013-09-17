@@ -31,3 +31,8 @@ Other dependencies like ```_``` (i.e., [Underscore](http://underscorejs.org)) an
 *Abstract* is licensed under the terms of the MIT license, see the included MIT-LICENSE file.
 
 
+## Disclaimer
+
+*Abstract* (and likewise: ```jsmf```) is very much a work-in-progress.
+
+
