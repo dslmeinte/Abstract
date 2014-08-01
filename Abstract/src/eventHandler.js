@@ -15,7 +15,7 @@ Abstract.EventHandler = function(handlerConfig, logger) {
 	 * Registers the required handlers through jQuery.
 	 */
 	this.observeWindow = function() {
-		$(document).ready(function() {
+		$(function() {
 			$(window).on({
 				click:		function(event) { handleClick(event); },		// TODO  consider capturing mouse release instead <--> mouse drag events
 				keypress:	function(event) { handleKeyPress(event); },
