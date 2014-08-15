@@ -55,13 +55,13 @@ Abstract.Widgets.Base = function() {	// singleton
 
 		// sanity checks:
 		if( typeof(widgetTypeName) !== 'string' ) {
-			throw new Error("widget must provide a (string-typed) type name");
+			throw "widget must provide a (string-typed) type name";
 		}
 		if( !(typeof(data) === 'undefined' || typeof(data) === 'object') ) {
-			throw new Error("(non-null) data argument to widget of type " + widgetTypeName + " is not object-typed");
+			throw "(non-null) data argument to widget of type " + widgetTypeName + " is not object-typed";
 		}
 		if( !this.htmlElt ) {
-			throw new Error("widget of type " + widgetTypeName + " must expose an htmlElt function");
+			throw "widget of type " + widgetTypeName + " must expose an htmlElt function";
 		}
 
 		this.typeName = function() {
@@ -76,7 +76,7 @@ Abstract.Widgets.Base = function() {	// singleton
 
 		this.setParent = function(treeParent_) {
 			if( !(treeParent_ && treeParent_ instanceof Abstract.Widgets.Base.AbstractWidget) ) {
-				throw new Error("parent must be a widget");
+				throw "parent must be a widget";
 			}
 			treeParent = treeParent_;
 		};

@@ -92,7 +92,7 @@ Abstract.Widgets.Layout.AbstractGroup = function(widgetTypeName, data, container
 			collapsibleContainer.addClass('abstract_invisible');
 			setFoldOpen(false);
 		} else {
-			throw new Error("collapse called but already collapsed");
+			throw "collapse called but already collapsed";
 		}
 	};
 
@@ -103,7 +103,7 @@ Abstract.Widgets.Layout.AbstractGroup = function(widgetTypeName, data, container
 			collapsibleContainer.removeClass('abstract_invisible');
 			setFoldOpen(true);
 		} else {
-			throw new Error("expand called but already expanded");
+			throw "expand called but already expanded";
 		}
 	};
 

@@ -1,4 +1,4 @@
-var Example1Data = {	// TODO  move to new (function() { ... })() style to make using local&closure var's easier
+var Example1Data = {	// TODO  move to Singleton style to make using local&closure var's easier
 
 	metaModelJSON: [
 	{

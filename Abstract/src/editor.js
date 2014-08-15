@@ -101,13 +101,13 @@ Abstract.Editor = function(metaModelJSON, modelJSON, templates, editorElement, l
 					dispatchOnLeftMouseClick(event, widget.parent());
 					return;
 				}
-				throw new Error("bubbleUp-action attempted by a widget without parent");
+				throw "bubbleUp-action attempted by a widget without parent";
 				// JSHint annotation below prevents the following warning: Expected a 'break' statement before 'case'
 			}
 			/* falls through */
 			case 'collapse':	widget.collapse(event); return;
 			case 'expand':		widget.expand(event); return;
-			default: throw new Error("invalid/unhandled action (literal): " + action);
+			default: throw "invalid/unhandled action (literal): " + action;
 		}
 	}
 
@@ -127,7 +127,7 @@ Abstract.Editor = function(metaModelJSON, modelJSON, templates, editorElement, l
 		switch(action) {
 			case 'input':	widget.input(character); return;
 			case 'nil':		return;
-			default: throw new Error("invalid/unhandled action (literal): " + action);
+			default: throw "invalid/unhandled action (literal): " + action;
 		}
 	}
 
@@ -168,7 +168,7 @@ Abstract.Editor = function(metaModelJSON, modelJSON, templates, editorElement, l
 
 	function execute(widget, action) {
 		if( !widget[action] ) {
-			throw new Error("widget of type " + widget.typeName() + " has no function (handle) for action=" + action);
+			throw "widget of type " + widget.typeName() + " has no function (handle) for action=" + action;
 		}
 		widget[action].call(widget);
 	} 
@@ -202,13 +202,13 @@ Abstract.Editor = function(metaModelJSON, modelJSON, templates, editorElement, l
 	function renderWidgetForInstance(mObject) {
 		var className = mObject.metaType.name;
 		var template = templates.objectTemplates[className];
-		if( !template ) throw new Error("no renderer defined for instances of " + className);
+		if( !template ) throw "no renderer defined for instances of " + className;
 		return template.call(renderObject, mObject);
 	}
 
 	function renderWidgetForValue(value, feature) {
 		var template = templates.featureTemplates[feature.containingClass.name][feature.name];
-		if( !template ) throw new Error("no renderer defined for feature " + feature.toString() );
+		if( !template ) throw "no renderer defined for feature " + feature.toString();
 		return template.call(renderObject, value, feature);
 	}
 
