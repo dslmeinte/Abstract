@@ -21,9 +21,8 @@ These are as follows:
 
 ## Dependencies
 
-*Abstract* has the following dependencies: JS in a browser (dûh), jQuery (redistributed) and [jsmf](https://github.com/dslmeinte/jsmf).
+*Abstract* has the following dependencies: JS in a browser (dûh), jQuery, Underscore.js (both redistributed) and [jsmf](https://github.com/dslmeinte/jsmf).
 (The latter may be switched to [ecore.js](https://github.com/ghillairet/ecore.js) at some later point.)
-Other dependencies like ```_``` (i.e., [Underscore](http://underscorejs.org)) and a JS-FRP library might come to rear their heads as well...
 
 
 ## License
